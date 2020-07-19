@@ -1,0 +1,12 @@
+<h1>Search of <strong>"{{searchText}}"</strong></h1>
+<hr>
+
+<div class="alert alert-primary" role="alert" *ngIf="searchHeroes.length == 0">
+    No existe ningún héroe con el término: "{{searchText}}"
+</div>
+
+<div class="card-columns">
+
+    <app-heroe-card [heroe]="heroe" [index]="heroe.idx" *ngFor="let heroe of searchHeroes" ></app-heroe-card>
+
+</div>
